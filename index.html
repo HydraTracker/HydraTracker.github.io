@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>HydraTrack</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="dark">
+  <header>
+    <h1>HydraTrack <span class="tagline">Stay Hydrated • Eat Well</span></h1>
+    <p id="streak">🔥 Streak - 0</p>
+  </header>
+
+  <nav>
+    <button class="tab-button active" data-tab="home">Home</button>
+    <button class="tab-button" data-tab="settings">Settings</button>
+    <button class="tab-button" data-tab="about">About</button>
+  </nav>
+
+  <main>
+    <!-- Home -->
+    <section id="home" class="tab-content active">
+      <h2>Home</h2>
+      <div class="card">
+        <p>Meals logged: <span id="meal-count">0</span>/3</p>
+        <button onclick="logMeal()">Log Meal</button>
+      </div>
+      <div class="card">
+        <p>Water glasses: <span id="water-count">0</span>/8</p>
+        <button onclick="logWater()">Log Water</button>
+      </div>
+      <div class="card">
+        <p>Set Reminder:</p>
+        <button onclick="setReminder(1)">1 min</button>
+        <button onclick="setReminder(10)">10 min</button>
+        <button onclick="setReminder(60)">1 hr</button>
+        <button onclick="setReminder(120)">2 hr</button>
+        <p id="countdown"></p>
+      </div>
+    </section>
+
+    <!-- Settings -->
+    <section id="settings" class="tab-content">
+      <h2>Settings</h2>
+      <div class="settings-box">
+        <label>
+          <input type="checkbox" id="notifications" checked>
+          Enable Notifications
+        </label>
+      </div>
+      <div class="settings-box">
+        <label>
+          <input type="checkbox" id="notification-sound" checked>
+          Enable Notification Sound
+        </label>
+      </div>
+      <div class="settings-box">
+        <button onclick="toggleTheme()">Toggle Light/Dark Mode</button>
+      </div>
+      <div class="settings-box version">
+        Version 1.0.0 - by Lishith
+      </div>
+    </section>
+
+    <!-- About -->
+    <section id="about" class="tab-content">
+      <h2>About</h2>
+      <p>This app was made by Lishith, a 12 year old who used his creativity and combined it with AI to make this app.</p>
+    </section>
+  </main>
+
+  <audio id="bell-sound" src="bell.mp3" preload="auto"></audio>
+  <script src="script.js"></script>
+</body>
+</html>
