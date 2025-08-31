@@ -1,0 +1,30 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  transition: background 0.3s, color 0.3s;
+}
+body.dark { background: #121212; color: white; }
+body.light { background: #f5f5f5; color: black; }
+header { text-align: center; padding: 1rem; border-bottom: 1px solid gray; }
+header h1 { margin: 0; }
+.tagline { font-size: 0.8rem; display: block; margin-top: 0.3rem; }
+#streak { margin: 0.5rem 0 0; font-weight: bold; }
+nav { display: flex; justify-content: center; border-bottom: 1px solid gray; background: #222; }
+nav button { flex: 1; padding: 0.6rem; border: none; cursor: pointer; background: none; color: white; transition: background 0.2s; }
+nav button.active { background: #444; }
+body.light nav { background: #ddd; }
+body.light nav button { color: black; }
+body.light nav button.active { background: #bbb; }
+main { padding: 1rem; }
+.tab-content { display: none; }
+.tab-content.active { display: block; }
+.card { background: #1e1e1e; padding: 1rem; margin: 0.8rem 0; border-radius: 10px; }
+.card button { margin-top: 0.5rem; padding: 0.5rem 1rem; border: none; border-radius: 8px; background: white; color: black; cursor: pointer; transition: background 0.2s; }
+body.light .card { background: white; border: 1px solid #ccc; }
+body.light .card button { background: black; color: white; }
+.settings-box { background: #1e1e1e; padding: 1rem; margin: 0.8rem 0; border-radius: 10px; }
+body.light .settings-box { background: white; border: 1px solid #ccc; }
+.version { font-size: 0.9rem; text-align: center; opacity: 0.8; }
+.popup { position: fixed; bottom: 20px; right: 20px; background: #ff9800; color: #fff; padding: 10px 15px; border-radius: 8px; box-shadow: 0 2px 6px rgba(0,0,0,0.3); z-index: 1000; font-weight: bold; animation: fadein 0.3s, fadeout 0.3s 1.7s; }
+@keyframes fadein { from {opacity:0;} to {opacity:1;} }
+@keyframes fadeout { from {opacity:1;} to {opacity:0;} }
